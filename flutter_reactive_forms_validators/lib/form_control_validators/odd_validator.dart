@@ -13,7 +13,6 @@ class OddValidator extends Validator<dynamic> {
 
     if (control.value is String) control.value = num.tryParse(control.value);
   
-
     if ((control.value as num).floor().isOdd) {
       control.setErrors({Vm.ValidationMessage.odd: true});
       control.markAsTouched();
